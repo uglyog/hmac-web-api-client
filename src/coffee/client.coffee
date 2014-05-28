@@ -41,6 +41,8 @@ $('#submit-request').click (event) ->
   event.preventDefault();
 
   url = $('#web-api-url').val()
+  url = url[0..-2] if url.match(/\/$/)
+
   accessId = $('#access-key-id').val()
   secret = $('#web-api-secrect').val()
   date = new Date().toUTCString()
