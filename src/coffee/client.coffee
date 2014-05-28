@@ -39,6 +39,8 @@ errorHandler = (jqXHR, textStatus, errorThrown) ->
 
 $('#submit-request').click (event) ->
   event.preventDefault();
+  $('.main .status .status-text').text('').removeClass('bg-success bg-danger')
+  $('.main .result .panel-body').text('')
 
   url = $('#web-api-url').val()
   url = url[0..-2] if url.match(/\/$/)
