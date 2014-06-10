@@ -36,6 +36,9 @@ successHandler = (data, textStatus, jqXHR) ->
 errorHandler = (jqXHR, textStatus, errorThrown) ->
   $('.main .status .status-text').text(textStatus + " - " + jqXHR.status + " " + errorThrown).addClass('bg-danger').removeClass('bg-success')
   $('.main .result .panel-body').text(jqXHR.responseText)
+  $('code').removeClass()
+  $('code').empty()
+  $('#header-info tbody').empty()
 
 $('#submit-request').click (event) ->
   event.preventDefault();
